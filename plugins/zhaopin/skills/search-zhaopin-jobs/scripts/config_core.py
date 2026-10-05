@@ -8,9 +8,15 @@ import os
 import re
 import secrets
 import time
+import sys
 from pathlib import Path
 from urllib.parse import quote
 from contextlib import contextmanager
+
+# JSON helper output is UTF-8 even when Windows redirects a legacy code page.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream,"reconfigure"):
+        _stream.reconfigure(encoding="utf-8")
 
 PLATFORMS = ("51job", "zhaopin", "boss")
 # Public platform geography, not a user's preferred cities. Users can add codes.

@@ -213,8 +213,8 @@ class ConfigurationTests(unittest.TestCase):
         for plugin,engine in (("job51","job51_workbench.py"),("zhaopin","zhaopin_workbench.py"),("boss","boss_ledger.py")):
             folder=next((ROOT/"plugins"/plugin/"skills").iterdir())/"scripts"
             start=["batch-start","--target","2","--mode","search-city","--keyword","产品设计"] if plugin=="boss" else ["start","--target","2"]
-            first=subprocess.run([sys.executable,str(folder/engine),*start],capture_output=True)
-            self.assertEqual(first.returncode,0,plugin+": start")
+            first=subprocess.run([sys.executable,str(folder/engine),*start],capture_output=True,env={**os.environ,"PYTHONIOENCODING":"ascii"})
+            self.assertEqual(first.returncode,0,plugin+": start: "+first.stderr.decode("utf-8",errors="replace"))
             lease=subprocess.run([sys.executable,str(folder/engine),"lease-acquire","--owner","synthetic-owner-1"],capture_output=True)
             self.assertEqual(lease.returncode,0,plugin+": first lease")
             conflict=subprocess.run([sys.executable,str(folder/engine),"lease-acquire","--owner","synthetic-owner-2"],capture_output=True)
