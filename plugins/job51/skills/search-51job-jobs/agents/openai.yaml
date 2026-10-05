@@ -1,0 +1,6 @@
+interface:
+  display_name: "51job / 前程无忧"
+  short_description: "按个人配置搜索前程无忧岗位，核对简历事实、岗位身份与授权投递回执。"
+  default_prompt: "使用 $search-51job-jobs 按我的配置筛选岗位，先不投递。"
+policy:
+  allow_implicit_invocation: true

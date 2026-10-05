@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "job-search-boss",
+  "version": "0.1.0-beta.1",
+  "description": "Search and screen BOSS 直聘 jobs, draft truthful greetings and verify authorized sends through the dedicated Chrome bridge. Use for BOSS、Boss直聘、招聘沟通、打招呼、去重和恢复；never use Playwright or CDP for BOSS.",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "agent-skills",
+    "job-search",
+    "boss",
+    "china"
+  ],
+  "repository": "https://github.com/Kerwin-k/codex-job-search-china"
+}

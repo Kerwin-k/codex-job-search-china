@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "platforms": ["51job", "zhaopin", "boss"],
+  "search": {
+    "cities": ["北京"],
+    "keywords": ["产品设计"],
+    "expectation_pools": [],
+    "salary": {"monthly_floor": 10000, "comparison": "lower_bound", "unknown": "review"},
+    "excluded_keywords": [],
+    "excluded_employer_types": [],
+    "required_keywords": [],
+    "page_budget": 4,
+    "city_codes": {}
+  },
+  "execution": {"mode": "review", "target_count": 5, "model": "inherit", "reasoning_effort": "inherit"},
+  "candidate": {"profile_file": "candidate.local.json", "greeting_file": "greeting.local.txt", "resume_labels": {}},
+  "platform_overrides": {}
+}

@@ -1,0 +1,44 @@
+{
+  "name": "codex-job-search-china",
+  "interface": {
+    "displayName": "Codex 国内求职工作流"
+  },
+  "plugins": [
+    {
+      "name": "job-search-51job",
+      "source": {
+        "source": "local",
+        "path": "./plugins/job51"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "job-search-zhaopin",
+      "source": {
+        "source": "local",
+        "path": "./plugins/zhaopin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "job-search-boss",
+      "source": {
+        "source": "local",
+        "path": "./plugins/boss"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "job-search-boss",
+  "version": "0.1.0-beta.1",
+  "description": "Search and screen BOSS 直聘 jobs, draft truthful greetings and verify authorized sends through the dedicated Chrome bridge. Use for BOSS、Boss直聘、招聘沟通、打招呼、去重和恢复；never use Playwright or CDP for BOSS.",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "BOSS 直聘 / Zhipin",
+    "shortDescription": "可定制的搜索、筛选与授权投递；个人数据保存在本地。"
+  }
+}

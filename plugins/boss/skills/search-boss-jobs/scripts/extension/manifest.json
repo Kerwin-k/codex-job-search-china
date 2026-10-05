@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "BOSS Single-Job Local Bridge",
+  "version": "0.5.9",
+  "description": "Exact-ID pinned BOSS bridge with deep recommendation scanning and verified messaging.",
+  "host_permissions": [
+    "https://*.zhipin.com/*",
+    "http://127.0.0.1:17891/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.zhipin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

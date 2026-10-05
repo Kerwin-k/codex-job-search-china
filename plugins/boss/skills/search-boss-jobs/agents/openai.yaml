@@ -1,0 +1,6 @@
+interface:
+  display_name: "BOSS 直聘 / Zhipin"
+  short_description: "按个人配置搜索 BOSS 直聘岗位，准备真实文案并验证授权沟通发送回执。"
+  default_prompt: "使用 $search-boss-jobs 按我的配置筛选岗位，先不投递。"
+policy:
+  allow_implicit_invocation: true
