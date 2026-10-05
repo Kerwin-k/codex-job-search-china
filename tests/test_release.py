@@ -45,7 +45,7 @@ class ReleaseTests(unittest.TestCase):
                 package.mkdir(parents=True)
                 (package/"package.json").write_text(json.dumps({"version":launcher.MCP_VERSION}),encoding="utf-8")
                 (package/"cli.js").write_text("",encoding="utf-8")
-            with patch.dict(os.environ,{"JOBFLOW_HOME":str(root/"private & data")}),patch.object(launcher.shutil,"which",side_effect=which),patch.object(launcher.subprocess,"run",side_effect=install) as run:
+            with patch.dict(os.environ,{"JOBFLOW_HOME":str(root/"private & data")}),patch.object(launcher.shutil,"which",side_effect=which),patch.object(launcher.subprocess,"check_output",return_value="v22.0.0"),patch.object(launcher.subprocess,"run",side_effect=install) as run:
                 command=launcher.ensure_mcp("51job")
                 self.assertEqual(command[0],str(root/"node.exe"))
                 self.assertTrue(command[1].endswith("cli.js"))

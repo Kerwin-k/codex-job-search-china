@@ -15,6 +15,8 @@ def ensure_mcp(platform):
     node=shutil.which("node")
     npm=shutil.which("npm.cmd") or shutil.which("npm")
     if not node or not npm:raise ConfigError("node_and_npm_required")
+    version=subprocess.check_output([node,"--version"],text=True).strip()
+    if int(version.lstrip("v").split(".",1)[0])<20:raise ConfigError("node_20_or_newer_required")
     base=platform_state(platform)/"dependencies"/"playwright-mcp"
     package=base/"node_modules"/"@playwright"/"mcp"
     manifest=package/"package.json"

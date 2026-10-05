@@ -117,7 +117,7 @@ def doctor(platform: str|None) -> dict:
     try:cfg=load_config(); checks.append({"name":"config","ok":True})
     except ConfigError as e:cfg=template();checks.append({"name":"config","ok":False,"error":str(e),"fix":"运行 init 或修正本地配置"})
     if any(p in ("51job","zhaopin") for p in ([platform] if platform else cfg["platforms"])):
-        checks.append({"name":"node","ok":shutil.which("node") is not None,"fix":"51job 与智联运行时需要 Node.js 18+"})
+        checks.append({"name":"node","ok":shutil.which("node") is not None,"fix":"51job 与智联运行时需要 Node.js 20+；启动器会检查版本"})
     try:validate_profile();checks.append({"name":"candidate_facts","ok":True})
     except ConfigError as e:checks.append({"name":"candidate_facts","ok":False,"error":str(e),"fix":"编辑本地事实资料并确认，不要修改源码"})
     for p in ([platform] if platform else cfg["platforms"]):

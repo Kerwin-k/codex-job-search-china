@@ -32,7 +32,7 @@ Configurable Codex skills and plugins for **51job / 前程无忧**, **Zhaopin / 
 
 ## 快速开始
 
-需要 **Python 3.10+、Node.js 18+ 和 Codex**。首版安装与连接指南以 Windows 为目标。
+需要 **Python 3.10+、Node.js 20+ 和 Codex**。首版安装与连接指南以 Windows 为目标。
 
 ```powershell
 git clone https://github.com/Kerwin-k/codex-job-search-china.git

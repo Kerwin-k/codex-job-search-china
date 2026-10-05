@@ -1,6 +1,6 @@
 # 安装与连接
 
-首版面向 Windows + Codex；Python 3.10+ 与 Node.js 18+ 需可从命令行调用。公共配置工具只依赖 Python 标准库。51job、智联连接上游 Playwright MCP，BOSS 使用本项目的 Chrome 桥接。
+首版面向 Windows + Codex；Python 3.10+ 与 Node.js 20+ 需可从命令行调用。公共配置工具只依赖 Python 标准库。51job、智联连接上游 Playwright MCP，BOSS 使用本项目的 Chrome 桥接。
 
 ## 1. 下载并配置
 
