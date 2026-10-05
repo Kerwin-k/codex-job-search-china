@@ -3,6 +3,11 @@
 This repository contains configurable Codex job-search plugins for 51job,
 Zhaopin and BOSS Zhipin. Preserve the user's requested career direction.
 
+When the user asks to install or configure this project, read `docs/codex-setup.md`
+and execute its setup flow. Collect missing preferences together, use non-interactive
+initialization, preserve existing configuration, and report actual readiness.
+Do not respond with installation instructions alone when local execution is available.
+
 - Keep user configuration, resumes, credentials and runtime state outside the repository.
 - Use synthetic people, companies, messages and job records in examples and tests.
 - Never copy local skill directories, browser profiles, backups or application ledgers wholesale.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-beta.2
+
+- Add a copy-and-send Codex setup prompt as the recommended README entry.
+- Add an executable setup runbook with grouped preferences, non-interactive initialization, selective installation and browser readiness checks.
+- Preserve existing installations and distinguish configuration, login, confirmed facts and live screening readiness.
+- Documentation and package metadata update; platform execution behavior is unchanged.
+
 ## 0.1.0-beta.1
 
 - Package independent Codex skills for 51job, Zhaopin and BOSS Zhipin.

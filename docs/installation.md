@@ -2,6 +2,8 @@
 
 首版面向 Windows + Codex；Python 3.10+ 与 Node.js 20+ 需可从命令行调用。公共配置工具只依赖 Python 标准库。51job、智联连接上游 Playwright MCP，BOSS 使用本项目的 Chrome 桥接。
 
+**想让 Codex 帮你完成？** 复制 [README 中的安装消息](../README.md#交给-codex-安装推荐)，它会按 [自动安装流程](codex-setup.md) 执行。以下为手动安装与连接的详细步骤。
+
 ## 1. 下载并配置
 
 ```powershell

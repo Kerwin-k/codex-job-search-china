@@ -6,16 +6,44 @@
 
 Configurable Codex skills and plugins for **51job / 前程无忧**, **Zhaopin / 智联招聘**, and **BOSS Zhipin / BOSS 直聘**.
 
-![Version](https://img.shields.io/badge/version-0.1.0--beta.1-2563eb?style=flat-square)
+![Version](https://img.shields.io/badge/version-0.1.0--beta.2-2563eb?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-0d9488?style=flat-square)
 ![Target](https://img.shields.io/badge/target-Windows_%2B_Codex-475569?style=flat-square)
 ![Privacy](https://img.shields.io/badge/user_data-outside_repository-7c3aed?style=flat-square)
 
-[快速开始](#快速开始) · [个性化配置](#个性化配置) · [平台支持](#平台支持) · [隐私](#隐私与数据边界) · [文档](#文档) · [English](#english)
+[交给 Codex 安装](#交给-codex-安装推荐) · [快速开始](#快速开始) · [个性化配置](#个性化配置) · [文档](#文档) · [English](#english)
 
 </div>
 
 > **源码测试版**：包含三个可安装的 Skill 插件、配置工具与平台执行模块。离线测试覆盖配置、薪资、岗位绑定、持久尝试和发送保护；本版本尚未进行迁移后的真实平台投递验证。先运行只筛选模式，确认你的环境和页面适配，再启用授权投递。
+
+## 交给 Codex 安装（推荐）
+
+**无需自己输入安装命令。** 在 Windows 上打开一个能执行本地命令的 Codex 会话，把下面整段话发给它：
+
+```text
+请帮我安装并配置 https://github.com/Kerwin-k/codex-job-search-china
+先读取 README.md、AGENTS.md 和 docs/codex-setup.md，按安装流程实际执行。
+请一次性询问我需要的平台、城市、岗位关键词和薪资偏好，默认只筛选。
+完成环境检查、安装所选插件和本地配置；能自动完成的步骤请直接完成。
+遇到登录、扩展加载或浏览器确认时，告诉我最少的操作，完成后继续核验。
+保留我已有的 Codex 设置和个人资料；最后说明已完成什么、还缺什么，以及下一句该怎么使用。
+本次仅安装配置，不授权投递或发送招聘消息。
+```
+
+你也可以在消息末尾补上自己的平台、城市和岗位要求，减少一次问答。无需提供账号密码、Cookie 或令牌。
+
+| Codex 帮你完成 | 你需要完成 |
+| --- | --- |
+| 检查环境、下载项目、安装选定插件、创建本地配置 | 告诉它目标平台、城市和岗位偏好 |
+| 生成平台运行文件、注册支持的连接入口、汇总检查结果 | 自行登录平台，完成验证码、扩展加载与连接确认 |
+| 引导只筛选试运行，列出具体下一步 | 准备匹配理由或发送前，确认自己的履历事实与附件 |
+
+安装会受 Codex 版本、权限与浏览器环境影响；需要你操作时，Codex 按 [自动安装流程](docs/codex-setup.md) 给出具体步骤。安装并不等于已经登录或可以投递。
+
+安装完成后，新开一个会话发一句：
+
+> 使用我刚安装的求职工作流，按本地配置筛选岗位，先不投递。
 
 ## 为什么用这个项目
 
@@ -31,6 +59,8 @@ Configurable Codex skills and plugins for **51job / 前程无忧**, **Zhaopin / 
 | **本地个人数据** | 配置、资料、凭据和运行记录放在源码目录之外 |
 
 ## 快速开始
+
+喜欢自己安装，可以继续使用下面的命令；也可以全部交给上面的 Codex 安装流程。
 
 需要 **Python 3.10+、Node.js 20+ 和 Codex**。首版安装与连接指南以 Windows 为目标。
 
@@ -156,6 +186,7 @@ $search-boss-jobs
 
 | 文档 | 内容 |
 | --- | --- |
+| [交给 Codex 安装](docs/codex-setup.md) | 自动安装步骤、最少用户操作与完成标准 |
 | [安装与连接](docs/installation.md) | 下载、平台插件、浏览器配置与桥接 |
 | [配置指南](docs/configuration.md) | 字段、薪资比较、平台覆盖与事实资料 |
 | [执行与恢复](docs/execution.md) | 授权、单次发送、回执、暂停与核对 |
@@ -181,6 +212,8 @@ python tools/release_check.py --history
 Start in review mode. Explicit user authorization is required before real applications or recruiter messages. Durable attempts block automatic retries after ambiguous results. User configuration, resumes and credentials stay outside the source tree.
 
 This is a source beta targeting Windows + Codex. Offline regression tests do not establish live platform compatibility. See the installation and execution guides before enabling sends.
+
+For assisted setup, give Codex this repository URL and ask it to follow [the setup runbook](docs/codex-setup.md). It should check your environment, collect preferences once, install only the selected skills/plugins, and guide you through browser login and connection confirmation. Setup does not authorize applications or recruiter messages.
 
 ## License
 

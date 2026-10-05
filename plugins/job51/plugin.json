@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "job-search-51job",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "description": "Search, screen, draft and apply to jobs on 51job / 前程无忧 using user-defined career preferences and verified resume facts. Use for 51job、前程无忧职位搜索、求职筛选、简历投递、去重和恢复；不用于智联或 BOSS。",
   "license": "MIT",
   "keywords": [
